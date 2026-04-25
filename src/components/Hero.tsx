@@ -102,7 +102,7 @@ const Hero = () => {
           </p>
 
           <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Building data-driven products at the intersection of <span className="text-foreground">AI, growth,</span> and <span className="text-foreground">user behavior.</span>
+            Building data-driven products at the intersection of <span className="text-foreground">AI, growth,</span> and <span className="text-foreground">user behavior</span>
            .{" "}
             Focused on turning insights into experiences that actually move metrics.
           </p>

@@ -4,19 +4,19 @@ import SectionHeading from "./SectionHeading";
 const groups = [
   {
     title: "Technical Skills",
-    items: ["React", "TypeScript", "Next.js", "Node.js", "Postgres", "Tailwind", "Framer Motion"],
+    items: ["React", "Tailwind CSS", "TypeScript", "Next.js", "Node.js", "ExpressJS", "Postgres & MongoDB", "Docker", "AWS & GCP", "Metabase", "CI/CD", "Data Analysis", "SQL", "Python", "AI/ML Concepts"],
   },
   {
     title: "Soft Skills",
-    items: ["Storytelling", "Leadership", "Strategy", "Collaboration", "Mentorship", "Public Speaking"],
+    items: ["Management", "Storytelling", "Leadership", "Strategy", "Collaboration", "Mentorship", "Public Speaking"],
   },
   {
     title: "Tools",
-    items: ["Figma", "Linear", "Notion", "Vercel", "GitHub", "Cursor"],
+    items: ["Figma", "Jira", "Notion", "Vercel", "GitHub", "Cursor", "Amplitude & Mixpanel", "CleverTap"],
   },
   {
     title: "AI Skills",
-    items: ["LLM Pipelines", "Embeddings", "RAG", "Prompt Engineering", "Agents", "Fine-tuning"],
+    items: ["LLM Pipelines & Orchestration", "Embeddings", "RAG", "Prompt Engineering", "Agents", "Fine-tuning"],
   },
 ];
 

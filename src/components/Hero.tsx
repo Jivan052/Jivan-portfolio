@@ -121,7 +121,7 @@ const Hero = () => {
           <div className="mt-6 flex flex-wrap items-center gap-6 text-sm">
             <span className="inline-flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-4 h-4" />
-              Bengalore, Karnataka
+              Bangalore, Karnataka
             </span>
             <span className="inline-flex items-center gap-2 text-muted-foreground">
               <span className="relative flex w-2.5 h-2.5">

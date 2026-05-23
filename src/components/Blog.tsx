@@ -22,7 +22,9 @@ const Blog = () => {
           {visible.map((p, i) => (
             <motion.a
               key={p.title}
-              href="#"
+              href={p.link || '#'}
+              target={p.link ? "_blank" : undefined}
+              rel={p.link ? "noopener noreferrer" : undefined}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -48,17 +50,7 @@ const Blog = () => {
           ))}
         </div>
 
-        {posts.length > INITIAL && (
-          <div className="mt-10 flex justify-center">
-            <Link
-              to="/writings"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass text-foreground hover:bg-secondary/60 hover-glow text-sm font-medium"
-            >
-              View More Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        )}
+        {/* "View More Articles" removed per update */}
       </div>
     </section>
   );

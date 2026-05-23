@@ -7,25 +7,22 @@ export type Post = {
   title: string;
   hook: string;
   read: string;
+  link?: string;
 };
 
 export const posts: Post[] = [
   {
     img: b1,
-    title: "The end of the always-on creator economy",
-    hook: "Why the next generation of creators will look more like studios than influencers.",
-    read: "8 min read",
+    title: "The Hack Hacker",
+    hook: "On hacking, craft, and culture.",
+    read: "5mins read",
+    link: "https://thinkerwithme.blogspot.com/2025/03/the-hack-hacker.html",
   },
   {
     img: b2,
-    title: "What AI agents will do to brand work",
-    hook: "A field guide for marketers who want to stay relevant in the next five years.",
-    read: "6 min read",
-  },
-  {
-    img: b3,
-    title: "Notes on quiet ambition",
-    hook: "On building patiently in a world that rewards loud, fast, and scaled.",
-    read: "4 min read",
+    title: "It's Onchain Island",
+    hook: "Reflections on on-chain worlds and communities.",
+    read: "5mins read",
+    link: "https://thinkerwithme.blogspot.com/2025/09/its-onchain-island.html",
   },
 ];

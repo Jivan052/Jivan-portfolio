@@ -1,6 +1,6 @@
-import p1 from "@/assets/project-1.jpeg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
+import p1 from "@/assets/nurotrader.png";
+import p2 from "@/assets/angsync.png";
+import p3 from "@/assets/mailt.png";
 
 export type Project = {
   img: string;
@@ -11,6 +11,13 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+   {
+    img: p3,
+    title: "MailT",
+    line: "Realtime email verification tool at SCALE",
+    tags: ["SMTP", "REST API", "Realtime"],
+    link: "https://mailtv.vercel.app/",
+  },
   {
     img: p1,
     title: "NuroTrader (web3 SaaS)",
@@ -24,12 +31,5 @@ export const projects: Project[] = [
     line: "Realtime visual sync and free YouTube playlist where both people can see, interact and sync with each other with ultra-low latency.",
     tags: ["Realtime", "Sync", "WebRTC"],
     link: "https://angsnyc-3.onrender.com/",
-  },
-  {
-    img: p3,
-    title: "QueryBeeAI",
-    line: "Realtime agentic data analysis tool combining AI and manual tools to eliminate multi-source data processing and analysis.",
-    tags: ["AI", "Data", "Realtime"],
-    link: "https://querybeeai.vercel.app/",
   },
 ];

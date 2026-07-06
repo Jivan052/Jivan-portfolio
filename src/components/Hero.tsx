@@ -1,29 +1,34 @@
 import { motion } from "framer-motion";
 import type { SVGProps } from "react";
-import { MapPin, Twitter, Linkedin, Github, Download } from "lucide-react";
+import { MapPin, Linkedin, Github, Download } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import avatar from "@/assets/profile-photo.jpeg";
 
-const HuggingFaceIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <rect x="3" y="3" width="18" height="18" rx="5" />
-    <circle cx="8.5" cy="9" r="1.2" />
-    <circle cx="15.5" cy="9" r="1.2" />
-    <path d="M7 15.5c1.5 1.5 4.5 1.5 6 0" />
+// Official X (formerly Twitter) logo mark.
+const XIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817-5.966 6.817H1.68l7.73-8.835L1.254 2.25h6.83l4.713 6.231 5.447-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z" />
   </svg>
 );
 
+// Hugging Face logo mark.
+const HuggingFaceIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.044 4.453a2.3 2.3 0 0 0-.87 1.798 2.31 2.31 0 0 0 2.31 2.31c.29 0 .566-.054.822-.15A9.96 9.96 0 0 0 12 22a9.96 9.96 0 0 0 6.694-2.589c.256.096.533.15.822.15a2.31 2.31 0 0 0 2.31-2.31 2.3 2.3 0 0 0-.87-1.798A9.96 9.96 0 0 0 22 12c0-5.523-4.477-10-10-10zm-3.2 7.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zm6.4 0a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM7.3 14.4c.2-.28.6-.34.88-.14 1.06.76 2.36 1.14 3.82 1.14s2.76-.38 3.82-1.14a.63.63 0 0 1 .88.14.63.63 0 0 1-.14.88c-1.28.92-2.82 1.38-4.56 1.38s-3.28-.46-4.56-1.38a.63.63 0 0 1-.14-.88z" />
+  </svg>
+);
+
+// Kaggle logo mark.
 const KaggleIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M7 5h7a3 3 0 0 1 0 6H7v8" />
-    <path d="M14 13a3 3 0 1 0 0 6" />
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.335" />
   </svg>
 );
 
 const socials = [
-  { Icon: Twitter, href: "https://x.com/JivanJamadar", label: "X" },
+  { Icon: XIcon, href: "https://x.com/JivanJamadar", label: "X" },
   { Icon: Linkedin, href: "https://www.linkedin.com/in/jivan-jamdar/", label: "LinkedIn" },
-  { Icon: Github, href: "#", label: "GitHub" },
+  { Icon: Github, href: "https://github.com/Jivan052", label: "GitHub" },
   { Icon: HuggingFaceIcon, href: "https://huggingface.co/Jivan01", label: "Hugging Face" },
   { Icon: KaggleIcon, href: "https://www.kaggle.com/jivan1234", label: "Kaggle" },
 ];
@@ -78,6 +83,8 @@ const Hero = () => {
               <a
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="w-10 h-10 rounded-xl glass flex items-center justify-center text-muted-foreground hover:text-foreground hover-glow"
               >
@@ -136,6 +143,8 @@ const Hero = () => {
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-9 h-9 rounded-lg glass flex items-center justify-center text-muted-foreground hover:text-foreground"
                 >

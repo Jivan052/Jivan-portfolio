@@ -7,8 +7,16 @@ import Education from "@/components/Education";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import FloatingConnect from "@/components/FloatingConnect";
+import { useSEO } from "@/hooks/use-seo";
 
 const Index = () => {
+  useSEO({
+    title: "Jivan Jamdar — Product & AI",
+    description:
+      "Jivan Jamdar — Product at Airlearn (IIT Guwahati). Building data-driven products at the intersection of AI, growth, and user behavior.",
+    path: "/",
+  });
+
   return (
     <main className="relative min-h-screen overflow-x-hidden">
       <Navbar />

@@ -2,8 +2,17 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { posts } from "@/data/posts";
+import { useSEO } from "@/hooks/use-seo";
 
-const WritingsPage = () => (
+const WritingsPage = () => {
+  useSEO({
+    title: "Writings — Jivan Jamdar",
+    description:
+      "Essays and field notes by Jivan Jamdar on building, product, AI, and the in-between.",
+    path: "/writings",
+  });
+
+  return (
   <main className="relative min-h-screen">
     <div className="container py-20 md:py-28">
       <Link
@@ -25,7 +34,9 @@ const WritingsPage = () => (
         {posts.map((p, i) => (
           <motion.a
             key={p.title}
-            href="#"
+            href={p.link || "#"}
+            target={p.link ? "_blank" : undefined}
+            rel={p.link ? "noopener noreferrer" : undefined}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.05 }}
@@ -51,6 +62,7 @@ const WritingsPage = () => (
       </div>
     </div>
   </main>
-);
+  );
+};
 
 export default WritingsPage;

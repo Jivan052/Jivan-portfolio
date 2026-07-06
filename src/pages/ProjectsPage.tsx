@@ -2,8 +2,17 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
+import { useSEO } from "@/hooks/use-seo";
 
-const ProjectsPage = () => (
+const ProjectsPage = () => {
+  useSEO({
+    title: "Projects — Jivan Jamdar",
+    description:
+      "A complete archive of products and experiments Jivan Jamdar has shipped — across AI, growth, and web.",
+    path: "/projects",
+  });
+
+  return (
   <main className="relative min-h-screen">
     <div className="container py-20 md:py-28">
       <Link
@@ -25,7 +34,9 @@ const ProjectsPage = () => (
         {projects.map((p, i) => (
           <motion.a
             key={p.title}
-            href="#"
+            href={p.link || "#"}
+            target={p.link ? "_blank" : undefined}
+            rel={p.link ? "noopener noreferrer" : undefined}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.05 }}
@@ -58,6 +69,7 @@ const ProjectsPage = () => (
       </div>
     </div>
   </main>
-);
+  );
+};
 
 export default ProjectsPage;

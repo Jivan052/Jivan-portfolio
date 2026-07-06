@@ -23,14 +23,16 @@ const Contact = () => (
 
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:hello@joestewart.co"
+              href="mailto:jamadarjivan01@gmail.com"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground font-medium hover-glow"
             >
               <Mail className="w-4 h-4" />
               jamadarjivan01@gmail.com
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/jivan-jamdar/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full glass text-foreground hover:bg-secondary/60 transition-colors"
             >
               Let's connect

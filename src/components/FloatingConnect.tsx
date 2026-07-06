@@ -1,12 +1,20 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import type { SVGProps } from "react";
 import { useEffect, useRef, useState } from "react";
 
+// Official X (formerly Twitter) logo mark.
+const XIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817-5.966 6.817H1.68l7.73-8.835L1.254 2.25h6.83l4.713 6.231 5.447-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z" />
+  </svg>
+);
+
 const items = [
-  { Icon: Linkedin, href: "#", label: "LinkedIn" },
-  { Icon: Github, href: "#", label: "GitHub" },
-  { Icon: Twitter, href: "#", label: "X" },
-  { Icon: Mail, href: "mailto:hello@joestewart.co", label: "Email" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/in/jivan-jamdar/", label: "LinkedIn" },
+  { Icon: Github, href: "https://github.com/Jivan052", label: "GitHub" },
+  { Icon: XIcon, href: "https://x.com/JivanJamadar", label: "X" },
+  { Icon: Mail, href: "mailto:jamadarjivan01@gmail.com", label: "Email" },
 ];
 
 const FloatingConnect = () => {
@@ -69,6 +77,8 @@ const FloatingConnect = () => {
                 <motion.a
                   key={label}
                   href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   initial={{ opacity: 0, scale: 0.6 }}
                   animate={{

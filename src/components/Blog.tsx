@@ -1,56 +1,26 @@
-import { motion } from "framer-motion";
-import { Clock, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import SectionHeading from "./SectionHeading";
+import CaseStudyCard from "./CaseStudyCard";
 import { posts } from "@/data/posts";
 
-const INITIAL = 3;
+const INITIAL = 4;
 
 const Blog = () => {
   const visible = posts.slice(0, INITIAL);
 
   return (
-    <section id="writing" className="relative py-16 md:py-20 lg:py-24">
+    <section id="writing" className="relative py-10 md:py-12 lg:py-14">
       <div className="container relative">
         <SectionHeading
-          eyebrow="Writing"
-          title="Recent essays."
-          subtitle="Field notes from building, branding, and the in-between."
+          eyebrow="Case studies"
+          title="Product thinking, written down."
+          subtitle="Real problems broken down — the reasoning, the trade-offs, and the metrics that decide whether it worked."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
           {visible.map((p, i) => (
-            <motion.a
-              key={p.title}
-              href={p.link || '#'}
-              target={p.link ? "_blank" : undefined}
-              rel={p.link ? "noopener noreferrer" : undefined}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group glass rounded-2xl overflow-hidden hover-glow flex flex-col"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="p-5 md:p-6 flex flex-col flex-1">
-                <h4 className="font-semibold leading-snug text-base md:text-lg">{p.title}</h4>
-                <p className="text-sm text-muted-foreground mt-2 line-clamp-2 flex-1">{p.hook}</p>
-                <p className="mt-4 text-xs text-muted-foreground inline-flex items-center gap-1.5">
-                  <Clock className="w-3 h-3" /> {p.read}
-                </p>
-              </div>
-            </motion.a>
+            <CaseStudyCard key={p.title} post={p} index={i} />
           ))}
         </div>
-
-        {/* "View More Articles" removed per update */}
       </div>
     </section>
   );

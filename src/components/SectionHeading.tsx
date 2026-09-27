@@ -12,7 +12,7 @@ const SectionHeading = ({ eyebrow, title, subtitle }: SectionHeadingProps) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-80px" }}
     transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-    className="max-w-2xl mb-12 md:mb-16"
+    className="max-w-2xl mb-8 md:mb-10"
   >
     {eyebrow && (
       <span className="inline-block text-xs uppercase tracking-[0.2em] text-primary/80 mb-4">

@@ -105,19 +105,37 @@
 @layer base {
   * {
     @apply border-border;
-    transition: background-color 0.4s var(--ease-smooth), border-color 0.4s var(--ease-smooth), color 0.4s var(--ease-smooth);
+  }
+
+  /* Colour cross-fade only while the theme is switching, so it doesn't slow down every hover and scroll. */
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition: background-color 0.4s var(--ease-smooth), border-color 0.4s var(--ease-smooth), color 0.4s var(--ease-smooth) !important;
   }
 
   html {
     scroll-behavior: smooth;
-    transition: background-color 0.4s var(--ease-smooth), color 0.4s var(--ease-smooth);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Keep anchor targets clear of the fixed navbar. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-    transition: background-color 0.4s var(--ease-smooth), color 0.4s var(--ease-smooth);
+    overflow-x: hidden;
   }
 
   /* Subtle dotted grid like reference */

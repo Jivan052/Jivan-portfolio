@@ -8,37 +8,40 @@ import protocolLabsLogo from "../assets/protocol-labs-logo.jpeg";
 
 const experiences = [
   {
-    role: "Product Management Intern",
+    role: "Product Manager",
+    tag: "Intern",
     company: "Airlearn",
-    period: "Jan 2026 — Present",
+    period: "Jan 2026 — Jul 2026",
     logo: airlearnLogo,
-    summary: "Driving product decisions through analytics, experimentation, and user behavior insights.",
+    summary: "Drove product decisions through analytics, experimentation, and user behavior insights.",
     points: [
-      "Improved user engagement by 12% through data-driven experimentation",
-      "Led A/B tests, funnels, and cohort analysis using Amplitude & Metabase",
-      "Authored PRDs and collaborated with design & growth teams for feature launches",
-      "Worked in PNs and Emails which impacted the user retention"
+      "Owned product analytics for AI learning experiences, combining user feedback and behavioral data to improve engagement by 12%.",
+      "Defined success metrics and analyzed feature adoption, funnels, and retention using Amplitude and Metabase to prioritize roadmap decisions and improve product performance.",
+      "Planned and executed lifecycle campaigns across push notifications and email, increasing user reactivation & resurrection by 10% through cohort-based experimentation.",
+      "Conducted user interviews across user segments and analyzed qualitative feedback alongside product analytics to identify friction points and validate feature hypotheses.",
     ],
   },
   {
-    role: "Product Management Intern",
+    role: "Product Manager",
+    tag: "Intern",
     company: "Physics Wallah",
     period: "June 2025 — Dec 2025",
     logo: physicsWallahLogo,
-    summary: "Repositioned the consumer brand globally.",
+    summary: "Shipped features across a multi-product portfolio, from first idea to launch.",
     points: [
-      "Designed product lifecycle from idea → user stories → launch",
-      "Worked cross-functionally with engineering, design, and growth teams",
-      "Created PRDs, wireframes, and user journeys for scalable features",
-      "Contributed to engagement and retention improvements"
+      "Led the end-to-end product lifecycle across FinTech, EdTech, Sales, and Social Media products, from ideation and user story creation to design collaboration and execution.",
+      "Collaborated with cross-functional teams (engineering, design, marketing, and growth) to deliver high-impact features, improving user engagement and retention.",
+      "Designed and documented PRDs, user journeys, wireframes, and prototypes, ensuring seamless communication between design and development.",
+      "Conducted competitive analysis across EdTech platforms to benchmark feature sets and identify roadmap opportunities.",
     ],
   },
   {
     role: "OSS developer",
     company: "Protocol Labs (Dev guild)",
-    period: "Jan 2025 - Apr 2025",
+    period: "Jan 2025 — Apr 2025",
+    location: "Remote",
     logo: protocolLabsLogo,
-    summary: "Narrative strategy for tier-one brands.",
+    summary: "Open-source development in a decentralized, CI/CD-driven environment.",
     points: [
       "Built and collaborated in decentralized environments with setup in CI/CD flow",
       "Strengthened understanding of scalable systems and dev workflows",
@@ -50,12 +53,12 @@ const Experience = () => {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="work" className="relative py-16 md:py-20 lg:py-24">
+    <section id="work" className="relative py-10 md:py-12 lg:py-14">
       <div className="container relative">
         <SectionHeading
           eyebrow="Experience"
-          title="Where I've built."
-          subtitle="A decade of shaping brands and shipping work that moved the needle."
+          title="Where I've shipped."
+          subtitle="Product roles where I turned user data, experiments, and PRDs into features people actually use."
         />
 
         <div className="space-y-3">
@@ -81,11 +84,16 @@ const Experience = () => {
                   </div>
                   
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-base md:text-lg font-semibold leading-tight">
+                    <h3 className="text-base md:text-lg font-semibold leading-tight flex flex-wrap items-center gap-x-2 gap-y-1">
                       {exp.role}
+                      {"tag" in exp && (
+                        <span className="text-[10px] md:text-[11px] font-medium uppercase tracking-[0.12em] px-2 py-0.5 rounded-full border border-border text-muted-foreground">
+                          {exp.tag}
+                        </span>
+                      )}
                     </h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      {exp.company} · {exp.period}
+                      {exp.company} · {"location" in exp && `${exp.location} · `}{exp.period}
                     </p>
                   </div>
                   <span

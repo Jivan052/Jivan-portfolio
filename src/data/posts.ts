@@ -1,9 +1,9 @@
-import b1 from "@/assets/blog-1.jpg";
-import b2 from "@/assets/blog-2.jpg";
-import b3 from "@/assets/blog-3.jpg";
+import llmTokens from "@/assets/case-llm-tokens.jpg";
+import qCommerce from "@/assets/case-qcommerce.jpg";
 
 export type Post = {
   img: string;
+  tag: string;
   title: string;
   hook: string;
   read: string;
@@ -12,17 +12,19 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    img: b1,
-    title: "The Hack Hacker",
-    hook: "On hacking, craft, and culture.",
-    read: "5mins read",
-    link: "https://thinkerwithme.blogspot.com/2025/03/the-hack-hacker.html",
+    img: llmTokens,
+    tag: "AI · Cost optimization",
+    title: "We Were Burning Money on LLM Tokens. Here's How We Fixed It.",
+    hook: "Tracing every call in an LLM research pipeline — and cutting usage from ~8,000 to ~1,700 tokens per app by skipping calls, not just shrinking them.",
+    read: "5 min read",
+    link: "https://medium.com/@jamadarjivan01/we-were-burning-money-on-llm-tokens-heres-how-we-fixed-it-eb0981988e13",
   },
   {
-    img: b2,
-    title: "It's Onchain Island",
-    hook: "Reflections on on-chain worlds and communities.",
-    read: "5mins read",
-    link: "https://thinkerwithme.blogspot.com/2025/09/its-onchain-island.html",
+    img: qCommerce,
+    tag: "Q-Commerce · Feature design",
+    title: "Post-Payment Forgotten Items: Flipkart Minutes",
+    hook: "Letting customers add a forgotten item after paying — by merging orders while the first is still being packed. Same rider, same trip, no second fee.",
+    read: "3 min read",
+    link: "https://medium.com/@jamadarjivan01/post-payment-forgotten-items-q-commerce-flipkart-minutes-5ba5966637ca",
   },
 ];

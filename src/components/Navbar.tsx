@@ -7,9 +7,9 @@ import avatar from "@/assets/profile-photo.jpeg";
 const links = [
   { href: "#work", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#writing", label: "Case Studies" },
   { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
-  { href: "#writing", label: "Writings" },
   { href: "#contact", label: "Connect" },
 ];
 

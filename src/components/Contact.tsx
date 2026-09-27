@@ -2,19 +2,19 @@ import { motion } from "framer-motion";
 import { Mail, ArrowUpRight } from "lucide-react";
 
 const Contact = () => (
-  <section id="contact" className="relative py-12 md:py-16">
+  <section id="contact" className="relative py-10 md:py-12">
     <div className="container relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative glass rounded-3xl p-10 md:p-16 overflow-hidden text-center"
+        className="relative glass rounded-3xl px-5 py-10 sm:p-10 md:p-16 overflow-hidden text-center"
       >
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-radial opacity-80 pointer-events-none" />
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[min(500px,120%)] aspect-square bg-gradient-radial opacity-80 pointer-events-none" />
         <div className="relative">
           <span className="text-xs uppercase tracking-[0.2em] text-primary/80">Let's talk</span>
-          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.05]">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.05]">
             Let's build something <span className="text-gradient">meaningful</span>.
           </h2>
           <p className="mt-5 text-muted-foreground max-w-xl mx-auto">
@@ -24,9 +24,9 @@ const Contact = () => (
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="mailto:jamadarjivan01@gmail.com"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground font-medium hover-glow"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-full bg-gradient-primary text-primary-foreground font-medium text-sm sm:text-base hover-glow min-w-0 break-all"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4 shrink-0" />
               jamadarjivan01@gmail.com
             </a>
             <a

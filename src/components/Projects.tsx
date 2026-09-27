@@ -1,61 +1,26 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import SectionHeading from "./SectionHeading";
+import ProjectCard from "./ProjectCard";
 import { projects } from "@/data/projects";
 
-const INITIAL = 3;
+const INITIAL = 4;
 
 const Projects = () => {
   const visible = projects.slice(0, INITIAL);
 
   return (
-    <section id="projects" className="relative py-16 md:py-20 lg:py-24">
+    <section id="projects" className="relative py-10 md:py-12 lg:py-14">
       <div className="container relative">
         <SectionHeading
-          eyebrow="Featured work"
-          title="Projects I'm proud of."
-          subtitle="A handful of products and campaigns where craft, story, and impact came together."
+          eyebrow="Projects"
+          title="Built to understand the tech."
+          subtitle="Hands-on AI tools I built end to end — so I know what's feasible, what it costs, and where it breaks before I write the PRD."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
           {visible.map((p, i) => (
-            <motion.a
-              key={p.title}
-              href={p.link || '#'}
-              target={p.link ? "_blank" : undefined}
-              rel={p.link ? "noopener noreferrer" : undefined}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group glass rounded-2xl overflow-hidden hover-glow flex flex-col"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="p-5 md:p-6 flex flex-col flex-1">
-                <h3 className="text-base md:text-lg font-semibold leading-snug">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground line-clamp-2 flex-1">
-                  {p.line}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {p.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="text-[11px] px-2 py-0.5 rounded-full bg-secondary/60 text-muted-foreground"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.a>
+            <ProjectCard key={p.title} project={p} index={i} />
           ))}
         </div>
 

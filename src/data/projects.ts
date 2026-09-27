@@ -1,35 +1,33 @@
-import p1 from "@/assets/nurotrader.png";
-import p2 from "@/assets/angsync.png";
-import p3 from "@/assets/mailt.png";
+import ragLab from "@/assets/rag-lab.jpg";
+import piperRube from "@/assets/piperrube.jpg";
 
 export type Project = {
   img: string;
   title: string;
   line: string;
+  highlight?: string;
   tags: string[];
   link?: string;
+  repo?: string;
 };
 
 export const projects: Project[] = [
-   {
-    img: p3,
-    title: "MailT",
-    line: "Realtime email verification tool at SCALE",
-    tags: ["SMTP", "REST API", "Realtime"],
-    link: "https://mailtv.vercel.app/",
+  {
+    img: piperRube,
+    title: "PiperRube — Doc Research Portal",
+    line: "Point it at a list of apps and it reads their real developer docs — auth type, MCP support, gating, doc quality — then ranks which integrations are worth building first.",
+    highlight: "Cut LLM token usage per app by ~79%",
+    tags: ["LLM Pipelines", "FastAPI", "Web Search", "Concurrency", "OpenRouter"],
+    link: "https://piper-rube.vercel.app/",
+    repo: "https://github.com/Jivan052/PiperRube",
   },
   {
-    img: p1,
-    title: "NuroTrader (web3 SaaS)",
-    line: "Autonomous trading powered by AI + account abstraction.",
-    tags: ["Strategy", "React (TS)", "Ether.js", "LLM", "MongoDB"],
-    link: "https://nurotrader.vercel.app/",
-  },
-  {
-    img: p2,
-    title: "AngsNYC — Realtime Visual Sync",
-    line: "Realtime visual sync and free YouTube playlist where both people can see, interact and sync with each other with ultra-low latency.",
-    tags: ["Realtime", "Sync", "WebRTC"],
-    link: "https://angsnyc-3.onrender.com/",
+    img: ragLab,
+    title: "General Purpose RAG Lab",
+    line: "Upload a PDF, TXT or MD file and ask questions — then inspect the exact chunks retrieved and the time spent on retrieval vs. LLM generation for every answer.",
+    highlight: "Makes every step of retrieval visible and measurable",
+    tags: ["RAG", "Embeddings", "Qdrant", "FastAPI", "OpenRouter"],
+    link: "https://general-purpose-rag.vercel.app",
+    repo: "https://github.com/Jivan052/General-Purpose-RAG",
   },
 ];

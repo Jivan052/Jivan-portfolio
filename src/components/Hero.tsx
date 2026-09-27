@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import type { SVGProps } from "react";
 import { MapPin, Linkedin, Github, Download } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-iitg.jpg";
 import avatar from "@/assets/profile-photo.jpeg";
 
 // Official X (formerly Twitter) logo mark.
@@ -18,24 +18,24 @@ const HuggingFaceIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-// Kaggle logo mark.
-const KaggleIcon = (props: SVGProps<SVGSVGElement>) => (
+// Medium logo mark.
+const MediumIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.335" />
+    <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
   </svg>
 );
 
 const socials = [
-  { Icon: XIcon, href: "https://x.com/JivanJamadar", label: "X" },
   { Icon: Linkedin, href: "https://www.linkedin.com/in/jivan-jamdar/", label: "LinkedIn" },
   { Icon: Github, href: "https://github.com/Jivan052", label: "GitHub" },
+  { Icon: MediumIcon, href: "https://medium.com/@jamadarjivan01", label: "Medium" },
+  { Icon: XIcon, href: "https://x.com/JivanJamadar", label: "X" },
   { Icon: HuggingFaceIcon, href: "https://huggingface.co/Jivan01", label: "Hugging Face" },
-  { Icon: KaggleIcon, href: "https://www.kaggle.com/jivan1234", label: "Kaggle" },
 ];
 
 const Hero = () => {
   return (
-    <section id="home" className="relative pt-24 pb-12 md:pb-16">
+    <section id="home" className="relative pt-24 pb-6 md:pb-8">
       <div className="container relative">
         {/* Cinematic banner */}
         <motion.div
@@ -46,13 +46,12 @@ const Hero = () => {
         >
           <img
             src={heroBg}
-            alt="Cinematic landscape with a path leading toward the horizon"
-            width={1920}
-            height={1080}
-            className="absolute inset-0 w-full h-full object-cover"
+            alt="Entrance gate of IIT Guwahati campus"
+            width={1600}
+            height={595}
+            className="absolute inset-0 w-full h-full object-cover object-[center_55%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 via-35% to-transparent" />
         </motion.div>
 
         {/* Avatar + socials */}

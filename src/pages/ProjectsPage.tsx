@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { motion } from "framer-motion";
+import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import { useSEO } from "@/hooks/use-seo";
 
@@ -8,7 +8,7 @@ const ProjectsPage = () => {
   useSEO({
     title: "Projects — Jivan Jamdar",
     description:
-      "A complete archive of products and experiments Jivan Jamdar has shipped — across AI, growth, and web.",
+      "AI tools Jivan Jamdar has built end to end — RAG pipelines, LLM research agents, and cost-optimized LLM workflows.",
     path: "/projects",
   });
 
@@ -23,48 +23,16 @@ const ProjectsPage = () => {
       </Link>
 
       <header className="max-w-3xl mb-12 md:mb-16">
-        <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">All work</span>
+        <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">All projects</span>
         <h1 className="mt-3 text-4xl md:text-6xl font-bold tracking-tight">Projects.</h1>
         <p className="mt-4 text-muted-foreground text-base md:text-lg">
-          A complete archive of products and campaigns I've shipped.
+          AI tools I've built end to end to understand the tech behind the products I manage.
         </p>
       </header>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+      <div className="grid md:grid-cols-2 gap-5 md:gap-6">
         {projects.map((p, i) => (
-          <motion.a
-            key={p.title}
-            href={p.link || "#"}
-            target={p.link ? "_blank" : undefined}
-            rel={p.link ? "noopener noreferrer" : undefined}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.05 }}
-            className="group glass rounded-2xl overflow-hidden hover-glow flex flex-col"
-          >
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <img
-                src={p.img}
-                alt={p.title}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
-              />
-            </div>
-            <div className="p-5 md:p-6 flex flex-col flex-1">
-              <h3 className="text-base md:text-lg font-semibold leading-snug">{p.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground line-clamp-2 flex-1">{p.line}</p>
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {p.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="text-[11px] px-2 py-0.5 rounded-full bg-secondary/60 text-muted-foreground"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.a>
+          <ProjectCard key={p.title} project={p} index={i} />
         ))}
       </div>
     </div>

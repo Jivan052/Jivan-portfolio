@@ -4,24 +4,24 @@ import SectionHeading from "./SectionHeading";
 const groups = [
   {
     title: "Technical Skills",
-    items: ["React", "Tailwind CSS", "TypeScript", "Next.js", "Node.js", "ExpressJS", "Postgres & MongoDB", "Docker", "AWS & GCP", "Metabase", "CI/CD", "Data Analysis", "SQL", "Python", "AI/ML Concepts"],
-  },
-  {
-    title: "Soft Skills",
-    items: ["Management", "Storytelling", "Leadership", "Strategy", "Collaboration", "Mentorship", "Public Speaking"],
+    items: ["Product Development & Management", "Product Analytics", "Data Analysis", "User Research", "Experimentation", "Consumer Product", "UI/UX Design", "Risk Management", "AI Automation", "Claude", "REST APIs", "SQL (MySQL, Postgres)", "Python (FastAPI)", "Web (HTML, CSS, JS, React)", "Node.js", "Express.js", "Prisma ORM", "Git & GitHub", "C/C++", "Fundamental Analysis", "Trading"],
   },
   {
     title: "Tools",
-    items: ["Figma", "Jira", "Notion", "Vercel", "GitHub", "Cursor", "Amplitude & Mixpanel", "CleverTap"],
+    items: ["Amplitude", "Mixpanel", "Metabase", "CleverTap", "MoEngage", "Jira", "Notion", "Slack", "Figma", "Wireframing", "Canva", "Power BI", "Excel", "Zapier", "MCP", "Gmail Automation", "DataStax"],
   },
   {
     title: "AI Skills",
     items: ["LLM Pipelines & Orchestration", "Embeddings", "RAG", "Prompt Engineering", "Agents", "Fine-tuning"],
   },
+  {
+    title: "Soft Skills",
+    items: ["Effective Communication", "Project Management", "Strategy & Execution", "Strategic Thinking", "Leadership", "Branding", "Product Design & Development", "Business Intelligence"],
+  },
 ];
 
 const Skills = () => (
-  <section id="skills" className="relative py-16 md:py-20 lg:py-24">
+  <section id="skills" className="relative py-10 md:py-12 lg:py-14">
     <div className="container relative">
       <SectionHeading
         eyebrow="Toolkit"

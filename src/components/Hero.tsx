@@ -104,16 +104,10 @@ const Hero = () => {
             Jivan Jamdar
           </h1>
           <p className="mt-3 text-lg md:text-xl text-muted-foreground">
-            Product@<span className="text-foreground/80">Airlearn | IIT,Guwahati</span>
+            Product @<span className="text-foreground/80">Airlearn</span> | Ex-Product <span className="text-foreground/80">PW, Protocol Labs</span> | <span className="text-foreground/80">IIT, Guwahati</span>
           </p>
 
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Building data-driven products at the intersection of <span className="text-foreground">AI, growth,</span> and <span className="text-foreground">user behavior</span>
-           .{" "}
-            Focused on turning insights into experiences that actually move metrics.
-          </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href="/JivanResume-Product.pdf"
               download

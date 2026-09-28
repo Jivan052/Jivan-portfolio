@@ -33,7 +33,7 @@ const CaseStudyCard = ({ post: p, index }: CaseStudyCardProps) => (
       <p className="text-sm md:text-[15px] text-muted-foreground mt-2 leading-relaxed">{p.hook}</p>
       <div className="mt-auto pt-5 flex items-center justify-between text-xs text-muted-foreground">
         <span className="inline-flex items-center gap-1.5">
-          <Clock className="w-3 h-3" /> {p.read} · Medium
+          <Clock className="w-3 h-3" /> {p.read} · {p.source}
         </span>
         <span className="inline-flex items-center gap-1 text-sm font-medium text-foreground">
           Read case study

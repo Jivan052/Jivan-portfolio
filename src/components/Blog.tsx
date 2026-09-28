@@ -16,7 +16,7 @@ const Blog = () => {
           subtitle="Real problems broken down — the reasoning, the trade-offs, and the metrics that decide whether it worked."
         />
 
-        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {visible.map((p, i) => (
             <CaseStudyCard key={p.title} post={p} index={i} />
           ))}

@@ -30,7 +30,7 @@ const WritingsPage = () => {
         </p>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         {posts.map((p, i) => (
           <CaseStudyCard key={p.title} post={p} index={i} />
         ))}

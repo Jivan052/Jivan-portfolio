@@ -1,6 +1,7 @@
 import llmTokens from "@/assets/case-llm-tokens.jpg";
 import qCommerce from "@/assets/case-qcommerce.jpg";
 import vera from "@/assets/case-vera.jpg";
+import systems from "@/assets/case-systems.jpg";
 
 export type Post = {
   img: string;
@@ -9,6 +10,7 @@ export type Post = {
   hook: string;
   read: string;
   source: string;
+  cta?: string;
   link?: string;
 };
 
@@ -39,5 +41,15 @@ export const posts: Post[] = [
     read: "5 min read",
     source: "Medium",
     link: "https://medium.com/@jamadarjivan01/we-were-burning-money-on-llm-tokens-heres-how-we-fixed-it-eb0981988e13",
+  },
+  {
+    img: systems,
+    tag: "Systems · Interactive lab",
+    title: "See How Systems Work",
+    hook: "Hands-on labs that show how real backends behave. Fire requests through a toy client → gateway → servers → database stack and watch threads fill, queues build, servers autoscale and a circuit breaker trip.",
+    read: "Interactive",
+    source: "Live lab",
+    cta: "Open the lab",
+    link: "https://claude.ai/artifact/M1T8Fn5iECmim6n33bfanB",
   },
 ];

@@ -36,7 +36,7 @@ const CaseStudyCard = ({ post: p, index }: CaseStudyCardProps) => (
           <Clock className="w-3 h-3" /> {p.read} · {p.source}
         </span>
         <span className="inline-flex items-center gap-1 text-sm font-medium text-foreground">
-          Read case study
+          {p.cta ?? "Read case study"}
           <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </span>
       </div>

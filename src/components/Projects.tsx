@@ -18,7 +18,7 @@ const Projects = () => {
           subtitle="Hands-on AI tools I built end to end — so I know what's feasible, what it costs, and where it breaks before I write the PRD."
         />
 
-        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {visible.map((p, i) => (
             <ProjectCard key={p.title} project={p} index={i} />
           ))}

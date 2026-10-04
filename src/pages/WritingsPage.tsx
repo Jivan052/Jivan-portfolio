@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import CaseStudyCard from "@/components/CaseStudyCard";
@@ -5,6 +6,8 @@ import { posts } from "@/data/posts";
 import { useSEO } from "@/hooks/use-seo";
 
 const WritingsPage = () => {
+  useEffect(() => window.scrollTo(0, 0), []);
+
   useSEO({
     title: "Case Studies — Jivan Jamdar",
     description:

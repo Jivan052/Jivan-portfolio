@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
@@ -5,6 +6,8 @@ import { projects } from "@/data/projects";
 import { useSEO } from "@/hooks/use-seo";
 
 const ProjectsPage = () => {
+  useEffect(() => window.scrollTo(0, 0), []);
+
   useSEO({
     title: "Projects — Jivan Jamdar",
     description:
@@ -30,7 +33,7 @@ const ProjectsPage = () => {
         </p>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
         {projects.map((p, i) => (
           <ProjectCard key={p.title} project={p} index={i} />
         ))}

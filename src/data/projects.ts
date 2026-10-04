@@ -1,5 +1,6 @@
 import ragLab from "@/assets/rag-lab.jpg";
 import piperRube from "@/assets/piperrube.jpg";
+import mailT from "@/assets/mailt.jpg";
 
 export type Project = {
   img: string;
@@ -29,5 +30,14 @@ export const projects: Project[] = [
     tags: ["RAG", "Embeddings", "Qdrant", "FastAPI", "OpenRouter"],
     link: "https://general-purpose-rag.vercel.app",
     repo: "https://github.com/Jivan052/General-Purpose-RAG",
+  },
+  {
+    img: mailT,
+    title: "MailT — Email Deliverability Checker",
+    line: "Verify email lists in bulk before you send — format, disposable and role-based checks, DNS/MX lookup and a live SMTP probe, with results streaming into the browser as each email completes.",
+    highlight: "Validates up to 500 emails per batch with catch-all detection",
+    tags: ["Node.js", "Express", "SMTP", "DNS / MX", "Streaming"],
+    link: "https://mailtv.vercel.app/",
+    repo: "https://github.com/Jivan052/mailt",
   },
 ];

@@ -2,6 +2,7 @@ import llmTokens from "@/assets/case-llm-tokens.jpg";
 import qCommerce from "@/assets/case-qcommerce.jpg";
 import vera from "@/assets/case-vera.jpg";
 import systems from "@/assets/case-systems.jpg";
+import money from "@/assets/case-money.jpg";
 
 export type Post = {
   img: string;
@@ -51,5 +52,15 @@ export const posts: Post[] = [
     source: "Live lab",
     cta: "Open the lab",
     link: "https://claude.ai/artifact/M1T8Fn5iECmim6n33bfanB",
+  },
+  {
+    img: money,
+    tag: "FinTech · Interactive guide",
+    title: "Money, Plainly",
+    hook: "A beginner's guide to saving, investing and trading in plain words — FDs, PPF, bonds, mutual funds and SIPs, then stocks, futures and options, with a live trading lab and an interactive risk-return map.",
+    read: "Interactive",
+    source: "Live guide",
+    cta: "Open the guide",
+    link: "https://claude.ai/artifact/HEknurUQ2GimHUvqww2gQM",
   },
 ];
